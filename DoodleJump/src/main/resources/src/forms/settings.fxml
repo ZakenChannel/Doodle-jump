@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.doodlejump.controllers.SettingsController">
+    <ImageView fitHeight="576.0" fitWidth="428.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../img/background/menu-background.jpg" />
+    </ImageView>
+    <Text layoutX="122.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Music:">
+        <font>
+            <Font name="Segoe Print" size="32.0" />
+        </font>
+    </Text>
+    <Label fx:id="labelOn" layoutX="178.0" layoutY="214.0" onMouseClicked="#handleOnAction" text="On" textFill="#23c62b">
+        <font>
+            <Font name="Segoe Print Bold" size="27.0" />
+        </font>
+    </Label>
+    <Label fx:id="labelOff" layoutX="238.0" layoutY="214.0" onMouseClicked="#handleOffAction" text="Off" textFill="#aaa7a2">
+        <font>
+            <Font name="Segoe Print Bold" size="28.0" />
+        </font>
+    </Label>
+    <Text fill="#ad1a1a" layoutX="17.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-rotate: -4;" text="doodle jump">
+        <font>
+            <Font name="Segoe Print" size="36.0" />
+        </font>
+    </Text>
+    <Text layoutX="177.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="options">
+        <font>
+            <Font name="Segoe Print" size="27.0" />
+        </font>
+    </Text>
+    <Button layoutX="226.0" layoutY="418.0" mnemonicParsing="false" onAction="#returnToMainMenu" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+        <graphic>
+            <ImageView fitHeight="60.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../img/buttons/but-menu.png" />
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="33.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleQuitAction" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+        <graphic>
+            <ImageView fitHeight="60.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../img/buttons/but-quit.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+</AnchorPane>

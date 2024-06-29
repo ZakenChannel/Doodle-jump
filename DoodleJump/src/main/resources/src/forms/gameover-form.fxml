@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="569.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.doodlejump.controllers.GameoverController">
+   <ImageView fitHeight="569.0" fitWidth="428.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../img/background/menu-background.jpg"/>
+   </ImageView>
+   <Text fill="#ad1a1a" layoutX="46.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-rotate: -4;"
+         text="game over!" wrappingWidth="275.9667053222656">
+      <font>
+         <Font name="Segoe Print" size="42.0"/>
+      </font>
+   </Text>
+   <Text layoutX="76.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="your score:">
+      <font>
+         <Font name="Segoe Print" size="27.0"/>
+      </font>
+   </Text>
+   <Text layoutX="10.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="your best score:">
+      <font>
+         <Font name="Segoe Print" size="27.0"/>
+      </font>
+   </Text>
+   <Text layoutX="67.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="your name:">
+      <font>
+         <Font name="Segoe Print" size="27.0"/>
+      </font>
+   </Text>
+   <Label fx:id="score" layoutX="242.0" layoutY="204.0" prefHeight="28.0" prefWidth="141.0" text="0">
+      <font>
+         <Font name="Segoe Print Bold" size="24.0"/>
+      </font>
+   </Label>
+   <Label fx:id="bestScore" layoutX="242.0" layoutY="253.0" prefHeight="28.0" prefWidth="141.0" text="0">
+      <font>
+         <Font name="Segoe Print Bold" size="24.0"/>
+      </font>
+   </Label>
+   <Button layoutX="36.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleOpenGameAction" prefHeight="64.0"
+           prefWidth="168.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <graphic>
+         <ImageView fitHeight="57.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../img/buttons/but-play.png"/>
+         </ImageView>
+      </graphic>
+   </Button>
+   <Button layoutX="223.0" layoutY="433.0" mnemonicParsing="false" onAction="#handleOpenMenuAction" prefHeight="64.0"
+           prefWidth="177.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <graphic>
+         <ImageView fitHeight="60.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../img/buttons/but-menu.png"/>
+         </ImageView>
+      </graphic>
+   </Button>
+   <Label fx:id="name" layoutX="228.0" layoutY="302.0" prefHeight="46.0" prefWidth="196.0">
+      <font>
+         <Font name="Segoe Print Bold" size="25.0"/>
+      </font>
+   </Label>
+</AnchorPane>

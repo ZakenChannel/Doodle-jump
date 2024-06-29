@@ -5,7 +5,7 @@ import javafx.scene.media.Media;
 
 import java.io.File;
 
-import static org.doodlejump.VarConstants.*;
+import static org.doodlejump.service.VarConstants.*;
 
 public class AudioController {
     private static AudioClip mediaPlayer;

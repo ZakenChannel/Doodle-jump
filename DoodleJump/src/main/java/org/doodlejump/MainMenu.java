@@ -22,7 +22,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-import static org.doodlejump.VarConstants.*;
+import static org.doodlejump.service.VarConstants.*;
 
 public class MainMenu extends Application implements Initializable {
     @FXML
@@ -40,7 +40,7 @@ public class MainMenu extends Application implements Initializable {
         doodler = (ImageView) fxmlLoader.getNamespace().get("doodler");
         AudioController.playBackgroundMusic();
         stage.setTitle("Doodle Jump");
-        Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream(PATH_TO_ICON_APPLICATION)));
+        Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream(PATH_TO_RIGHT_DOODLE)));
         stage.getIcons().add(icon);
         stage.setResizable(false);
         stage.setScene(scene);
@@ -55,11 +55,9 @@ public class MainMenu extends Application implements Initializable {
     public static void jumpDoodler(ImageView doodler) {
         Timeline timeline = new Timeline();
 
-        // Прыжок вверх с замедлением к верхней точке
         KeyFrame jumpUp = new KeyFrame(Duration.seconds(0.7),
                 new KeyValue(doodler.translateYProperty(), -250, Interpolator.EASE_OUT));
 
-        // Падение с ускорением от верхней точки
         KeyFrame fallDown = new KeyFrame(Duration.seconds(1.4),
                 new KeyValue(doodler.translateYProperty(), 0, Interpolator.EASE_IN));
 
@@ -78,13 +76,25 @@ public class MainMenu extends Application implements Initializable {
     @FXML
     private void handleOpenSettingsAction(ActionEvent event) throws IOException {
         Node source = (Node) event.getSource();
-        Scene scene1 = source.getScene();
-        Stage stage = (Stage) scene1.getWindow();
+        Scene thisScene = source.getScene();
+        Stage stage = (Stage) thisScene.getWindow();
 
         FXMLLoader fxmlLoader = new FXMLLoader(MainMenu.class.getResource(PATH_TO_SETTINGS_FORM));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
     }
+
+    @FXML
+    private void handleOpenGameAction(ActionEvent event) throws IOException {
+        Node source = (Node) event.getSource();
+        Scene thisScene = source.getScene();
+        Stage stage = (Stage) thisScene.getWindow();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(MainMenu.class.getResource(PATH_TO_GAME_FORM));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+    }
+
 
     /**
      * close application by button

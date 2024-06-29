@@ -11,4 +11,8 @@ module org.doodlejump.doodlejump {
     exports org.doodlejump;
     exports org.doodlejump.audiocontrol;
     opens org.doodlejump.audiocontrol to javafx.fxml;
+    exports org.doodlejump.controllers;
+    opens org.doodlejump.controllers to javafx.fxml;
+    exports org.doodlejump.service;
+    opens org.doodlejump.service to javafx.fxml;
 }
